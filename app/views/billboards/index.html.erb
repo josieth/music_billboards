@@ -1,0 +1,13 @@
+<h1>Billboards</h1>
+
+<%= link_to 'New Billboard', new_billboard_path %>
+<% if @billboards.empty? %>
+<h2>No Billboards</h2>
+<% else %>
+  <ul>
+    <% @billboards.each do |billboard| %>
+      <li><%= billboard.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+
